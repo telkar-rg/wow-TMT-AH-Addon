@@ -1,0 +1,8 @@
+## Title: TMT: AH Addon (0.1)
+## Interface: 30300
+## Author: Telkar-RG
+## Notes: Adds an indicator for known Trangsmog visuals in the AH interface
+## Notes-deDE: Fügt einen Marker zu bekannten Transmog-Aussehen im AH-Interface hinzu
+## Dependencies: TransmogTracker
+
+TMT_AH_Addon.xml

@@ -1,3 +1,7 @@
+*.temp
+_Releases/*
+Git wow-TMT-AH-Addon.lnk
+
 # Compiled Lua sources
 luac.out
 
