@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: AH_ShowBid
+## Notes: Shows if someone has bid on the auction.
+## Version: 1.3
+## Author: iceeagle
+## DefaultState: enabled
+
+AH_ShowBid.xml
