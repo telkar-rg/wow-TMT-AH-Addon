@@ -9,4 +9,5 @@ Requires the [Transmog-Tracker](https://github.com/telkar-rg/wow-Transmog-Tracke
 ### [TMT: AH Addon 0.1](https://github.com/telkar-rg/wow-TMT-AH-Addon/releases/tag/0.1)
 - Adds indicator to AH interface for unlocked Transmog visuals
 - Requires the [Transmog-Tracker](https://github.com/telkar-rg/wow-Transmog-Tracker) addon
+- Currently **does not** work for the Auctioneer Addon
 
