@@ -4,5 +4,6 @@
 ## Notes: Adds an indicator for known Trangsmog visuals in the AH interface
 ## Notes-deDE: Fügt einen Marker zu bekannten Transmog-Aussehen im AH-Interface hinzu
 ## Dependencies: TransmogTracker
+## OptionalDeps: Auc-Advanced, Auctionator
 
 TMT_AH_Addon.xml

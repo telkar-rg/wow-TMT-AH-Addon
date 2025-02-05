@@ -1,3 +1,7 @@
+local addonName, addonTable = ...
+
+local orig_print = print()
+local print = function(...) print("|cFFFF4040{"..addonName.."}:|r", ...) end
 
 --------------------------------------------------------------------------------------------------------
 --                                        TMT_AH_Addon variables                                        --
@@ -12,6 +16,16 @@ local tex_2 = "\124TInterface\\TargetingFrame\\UI-RaidTargetingIcon_2:0\124t" 	-
 --                                          TMT_AH_Addon events                                         --
 --------------------------------------------------------------------------------------------------------
 function TMT_AH_Addon_OnLoad()
+	-- stop if other AH addons are loaded
+	if IsAddOnLoaded("Auc-Advanced") then 
+		print( "Auc-Advanced", "|cffFFFF40is loaded")
+		return 
+	end
+	if IsAddOnLoaded("Auctionator") then 
+		print( "Auctionator", "|cffFFFF40is loaded")
+		return
+	end
+	
 	-- Register events
 	this:RegisterEvent("VARIABLES_LOADED");
 	this:RegisterEvent("AUCTION_HOUSE_SHOW");
