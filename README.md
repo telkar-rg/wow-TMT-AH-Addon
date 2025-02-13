@@ -4,7 +4,7 @@ WotLK 3.3.5 Addon to add an indicator for known Transmog appearances in the AH i
 Requires the [Transmog-Tracker](https://github.com/telkar-rg/wow-Transmog-Tracker) addon.
 
 ## Changes
-<img src="https://raw.githubusercontent.com/telkar-rg/wow-TMT-AH-Addon/main/_IMG/AH_1.png" align="right" size="50%">
+<img src="https://raw.githubusercontent.com/telkar-rg/wow-TMT-AH-Addon/main/_IMG/AH_1.png" align="right" width="50%">
 
 ### [TMT: AH Addon 0.3](https://github.com/telkar-rg/wow-TMT-AH-Addon/releases/tag/0.3)
 - Addon now does no longer interfere with the AH functions when _Auctioneer_ or _Auctionator_ are detected
