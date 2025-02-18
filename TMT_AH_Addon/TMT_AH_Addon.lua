@@ -9,8 +9,9 @@ local print = function(...) print("|cFFFF4040{"..addonName.."}:|r", ...) end
 local TMT_AH_Addon_OldGetAuctionItemInfo;
 local TMT_AH_Addon_AlreadyHooked;
 local TMT
+local TMT_AH_Addon_GetAuctionItemInfo -- forward declaration
 
-local PlayerFaction, PlayerClassEN
+local PlayerFaction, PlayerClassEN, PlayerClassLocal
 local tmog_itemSubClasses = {}
 
 local tex_1, tex_2, tex_3
@@ -115,11 +116,11 @@ local tmog_allowed = {
 --------------------------------------------------------------------------------------------------------
 function TMT_AH_Addon_OnLoad()
 	-- stop if other AH addons are loaded
-	if IsAddOnLoaded("Auc-Advanced") then 
+	if IsAddOnLoaded("Auc-Advanced") then
 		print( "Auc-Advanced", "|cffFFFF40is loaded")
-		return 
+		return
 	end
-	if IsAddOnLoaded("Auctionator") then 
+	if IsAddOnLoaded("Auctionator") then
 		print( "Auctionator", "|cffFFFF40is loaded")
 		return
 	end
@@ -134,7 +135,7 @@ function TMT_AH_Addon_OnLoad()
 	this:RegisterEvent("AUCTION_HOUSE_SHOW");
 end
 
-function TMT_AH_Addon_OnEvent(event, arg1)
+function TMT_AH_Addon_OnEvent(event, ...)
 	-- On load
 	if ( event == "VARIABLES_LOADED" ) then
 		TMT_AH_Addon_AlreadyHooked = false;
@@ -154,7 +155,7 @@ end
 --------------------------------------------------------------------------------------------------------
 function TMT_AH_Addon_GetAuctionItemInfo(list, offset_p1)
 	local name, texture, count, quality, canUse, level, minBid, minIncrement, buyoutPrice, bidAmount, highBidder, owner, sold =  TMT_AH_Addon_OldGetAuctionItemInfo(list, offset_p1);
-	local itemLink, itemType, itemSubType, itemEquipLoc
+	local itemLink, itemType, itemSubType, itemEquipLoc, tmogState
 	itemLink = GetAuctionItemLink(list, offset_p1)
 	local itemId = strmatch(itemLink, "\124c%x+\124Hitem:(%d+):.+\124h.+\124h\124r")
 	-- print("--", offset_p1, itemLink, gsub(itemLink,"\124","!"))
