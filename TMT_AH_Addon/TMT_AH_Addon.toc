@@ -1,4 +1,4 @@
-## Title: Transmog-Tracker: |cFF40FFFF|HTMT|hAuction House Vanilla Plugin|h|r (0.3)
+## Title: Transmog-Tracker: |cFF40FFFF|HTMT|hAuction House Vanilla Plugin|h|r (0.5)
 ## Interface: 30300
 ## Author: Telkar-RG
 ## Notes: Adds an indicator for known Trangsmog visuals in the AH interface.|n|cFFFF40FFDeactivate, when using AH-Addons!|r
